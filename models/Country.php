@@ -11,6 +11,7 @@ use Yii;
  * @property string $code
  * @property string $name
  * @property int $population
+ * @property int $timestamp
  */
 class Country extends \yii\db\ActiveRecord
 {
@@ -29,7 +30,7 @@ class Country extends \yii\db\ActiveRecord
     {
         return [
             [['code', 'name', 'population'], 'required'],
-            [['population'], 'integer'],
+            [['population', 'timestamp'], 'integer'],
             [['code'], 'string', 'max' => 2],
             [['name'], 'string', 'max' => 150],
         ];
@@ -45,6 +46,7 @@ class Country extends \yii\db\ActiveRecord
             'code' => 'Code',
             'name' => 'Name',
             'population' => 'Population',
+            'timestamp' => 'Timestamp',
         ];
     }
 }
