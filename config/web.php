@@ -50,6 +50,11 @@ $config = [
             ],
         ],
         */
+
+    ],
+    'modules' => [
+        'gridview' => ['class' => 'kartik\grid\Module']
+
     ],
     'params' => $params,
 ];
@@ -69,6 +74,11 @@ if (YII_ENV_DEV) {
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
+//    $config['modules']['gii'] = [
+//        'class' => 'yii\gii\Module',
+//        // uncomment the following to add your IP if you are not connecting from localhost.
+//        //'allowedIPs' => ['127.0.0.1', '::1'],
+//    ];
 }
 
 return $config;
